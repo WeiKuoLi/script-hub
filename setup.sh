@@ -22,6 +22,7 @@ echo 'alias sshxxx="ssh -XY wli22@bastion.crc.nd.edu"' >> ~/.bash_aliases
 # Install Google Chrome stable
 #wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 #sudo dpkg -i google-chrome-stable_current_amd64.deb
+#sudo apt remove -y firefox
 
 ######## miniconda with jupyter notebook #######
 
