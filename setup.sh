@@ -30,7 +30,7 @@ sudo apt install -u jupyter-notebook
 
 # Install Miniconda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh
-bash /tmp/miniconda.sh -b -p /opt/miniconda
+sudo bash /tmp/miniconda.sh -b -p /opt/miniconda
 
 # Add Miniconda bin directory to PATH in .bashrc
 echo 'export PATH="/opt/miniconda/bin:$PATH"' >> ~/.bashrc
@@ -47,7 +47,8 @@ source ~/.bashrc
 # Create conda environment 'science' and install required packages
 conda create -y -n science python=3.9
 conda activate science
-conda install -y -n science torch matplotlib numpy pandas ipykernel
+conda install -y pytorch torchvision torchaudio cpuonly numpy matplotlib pandas -c pytorch
+conda install -y ipykernel
 
 # Set up Jupyter Notebook kernel
 python -m ipykernel install --user --name=science --display-name="python [science]"
