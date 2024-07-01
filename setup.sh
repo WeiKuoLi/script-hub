@@ -89,7 +89,7 @@ read -p "Please add your SSH key to GitHub and press Enter to continue..."
 ssh -T git@github.com
 
 # Clone repository to ~/Code (create directory if not exist)
-code_dir="$HOME/Code"
+code_dir="./Code"
 mkdir -p $code_dir  # create directory if not exist
 cd $code_dir || exit 1  # change directory to Code or exit if failed
 
