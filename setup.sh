@@ -3,15 +3,30 @@
 # Update package lists
 sudo apt update
 
+
+######## basic #######
+
 # wget and dpkg
 sudo apt install dpkg wget
 
+# Install Git, Vim, SSH, g++, build-essential, and CMake
+sudo apt install -y vim ssh g++ build-essential cmake
+
+# Add Miniconda bin directory to PATH in .bashrc
+echo 'alias l="ls"' >> ~/.bash_aliases
+echo 'alias ll="ls -l"' >> ~/.bash_aliases
+echo 'alias p="python3"' >> ~/.bash_aliases
+echo 'alias sshxxx="ssh -XY wli22@bastion.crc.nd.edu"' >> ~/.bash_aliases
+
+######## chrome #######
 # Install Google Chrome stable
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-# Install Git, Vim, SSH, g++, build-essential, and CMake
-sudo apt install git vim ssh g++ build-essential cmake
+######## miniconda with jupyter notebook #######
+
+# jupyter-notebook
+sudo apt install -u jupyter-notebook
 
 # Install Miniconda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh
@@ -37,8 +52,12 @@ conda install -y -n science torch matplotlib numpy pandas ipykernel
 # Set up Jupyter Notebook kernel
 python -m ipykernel install --user --name=science --display-name="python [science]"
 
+
 # Final message
 echo -e "\nSetup complete. Conda environment 'science' and Jupyter Notebook kernel 'science' created."
+
+
+######## git #######
 
 
 # Update package lists and install Git
