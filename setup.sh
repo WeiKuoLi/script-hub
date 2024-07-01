@@ -7,7 +7,7 @@ sudo apt update
 ######## basic #######
 
 # wget and dpkg
-sudo apt install dpkg wget
+sudo apt install -y dpkg wget
 
 # Install Git, Vim, SSH, g++, build-essential, and CMake
 sudo apt install -y vim ssh g++ build-essential cmake
