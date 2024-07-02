@@ -18,11 +18,6 @@ echo 'alias ll="ls -l"' >> ~/.bash_aliases
 echo 'alias p="python3"' >> ~/.bash_aliases
 echo 'alias sshxxx="ssh -XY wli22@bastion.crc.nd.edu"' >> ~/.bash_aliases
 
-######## chrome #######
-# Install Google Chrome stable
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome-stable_current_amd64.deb
-sudo apt remove -y firefox
 
 ######## miniconda with jupyter notebook #######
 
@@ -101,4 +96,9 @@ git clone git@github.com:WeiKuoLi/Ascii_waves.git
 echo -e "\nRepository cloned successfully to $code_dir/Ascii_waves."
 
 
+######## chrome #######
+# Install Google Chrome stable
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt remove -y firefox
 
