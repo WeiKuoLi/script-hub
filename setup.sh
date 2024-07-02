@@ -92,9 +92,13 @@ mkdir -p $code_dir  # create directory if not exist
 cd $code_dir || exit 1  # change directory to Code or exit if failed
 
 git clone git@github.com:WeiKuoLi/Ascii_waves.git
+git clone git@github.com:WeiKuoLi/script-hub.git
+
+cd ./script-hub
+python3 test.py
 
 # Confirmation message
-echo -e "\nRepository cloned successfully to $code_dir/Ascii_waves."
+echo -e "\nRepository cloned successfully to $code_dir"
 
 
 ######## chrome #######
