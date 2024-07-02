@@ -21,8 +21,6 @@ echo 'alias sshxxx="ssh -XY wli22@bastion.crc.nd.edu"' >> ~/.bash_aliases
 
 ######## miniconda with jupyter notebook #######
 
-# jupyter-notebook
-sudo apt install -y -u jupyter-notebook
 
 # Install Miniconda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /tmp/miniconda.sh
@@ -49,6 +47,9 @@ conda install -y ipykernel
 # Set up Jupyter Notebook kernel
 python -m ipykernel install --user --name=science --display-name="python [science]"
 
+
+# jupyter-notebook
+sudo apt install -y -u jupyter-notebook
 
 # Final message
 echo -e "\nSetup complete. Conda environment 'science' and Jupyter Notebook kernel 'science' created."
