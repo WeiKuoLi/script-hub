@@ -107,3 +107,8 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install --fix-broken -y google-chrome-stable_current_amd64.deb
 sudo apt remove -y firefox
 
+
+######## vim #########
+echo "set tabstop=2" >> ~/.vimrc
+echo "set shiftwidth=2" >> ~/.vimrc
+echo "set expandtab" >> ~/.vimrc
