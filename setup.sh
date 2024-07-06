@@ -41,15 +41,15 @@ source ~/.bashrc
 # Create conda environment 'science' and install required packages
 conda create -y -n science python=3.9
 conda activate science
-conda install -y pytorch torchvision torchaudio cpuonly numpy matplotlib pandas -c pytorch
-conda install -y ipykernel
+conda install -y pytorch cpuonly numpy matplotlib pandas -c pytorch
+#conda install -y ipykernel
 
 # Set up Jupyter Notebook kernel
-python -m ipykernel install --user --name=science --display-name="python [science]"
+#python -m ipykernel install --user --name=science --display-name="python [science]"
 
 
 # jupyter-notebook
-sudo apt install -y -u jupyter-notebook
+#sudo apt install -y -u jupyter-notebook
 
 # Final message
 echo -e "\nSetup complete. Conda environment 'science' and Jupyter Notebook kernel 'science' created."
@@ -103,9 +103,9 @@ echo -e "\nRepository cloned successfully to $code_dir"
 
 ######## chrome #######
 # Install Google Chrome stable
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install --fix-broken -y google-chrome-stable_current_amd64.deb
-sudo apt remove -y firefox
+# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+# sudo apt install --fix-broken -y google-chrome-stable_current_amd64.deb
+# sudo apt remove -y firefox
 
 
 ######## vim #########
